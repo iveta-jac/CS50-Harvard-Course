@@ -44,8 +44,8 @@ Exercises and projects from the [Harvard University course](https://cs50.harvard
 5. [DNA](https://cs50.harvard.edu/x/2020/psets/6/dna)
 
 ### Problem Set 7. *Basic SQL (Python, SQL)*
-1. [Movies](https://cs50.harvard.edu/x/2020/psets/7/movies/)
-2. [Houses](https://cs50.harvard.edu/x/2020/psets/7/houses/) *(roster.py)*
+1. [Movies](https://cs50.harvard.edu/x/2020/psets/7/movies/) *(1-13.sql)*
+2. [Houses](https://cs50.harvard.edu/x/2020/psets/7/houses/) *(import.py, roster.py)*
 
 ## Topics
 
