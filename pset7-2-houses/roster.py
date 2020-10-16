@@ -15,11 +15,19 @@ def main():
 
     house = argv[1]
 
-    # Query database for all students in house
-    rows = db.execute("SELECT first, middle, last, birth FROM students WHERE house=? ORDER BY last", house);
+    # Query database for all students in a house, sort by last name, then first name
+    rows = db.execute("SELECT first, middle, last, birth FROM students WHERE house = ? ORDER BY last, first", house);
 
+    # Print out each student's full name and birth year
     for row in rows:
-        print(row)
+
+        # If there is no middle name
+        if row["middle"] != "NULL":
+            print(row["first"] + " " + row["middle"] + " " + row["last"] + ",", "born", row["birth"])
+
+        # With middle name
+        else:
+            print(row["first"] + " " + row["last"] + ",", "born", row["birth"])
 
 
 main()
