@@ -6,23 +6,24 @@ from sys import argv, exit
 # Set up a database connection
 db = SQL("sqlite:///students.db")
 
+
 def main():
 
     # Check for correct number of args
     if len(argv) != 2:
-        print("Usage: python roster.py Gryffindor")
+        print("Usage: python roster.py house")
         exit(1)
 
     house = argv[1]
 
     # Query database for all students in a house, sort by last name, then first name
-    rows = db.execute("SELECT first, middle, last, birth FROM students WHERE house = ? ORDER BY last, first", house);
+    rows = db.execute("SELECT first, middle, last, birth FROM students WHERE house = ? ORDER BY last, first", house)
 
     # Print out each student's full name and birth year
     for row in rows:
 
         # If there is no middle name
-        if row["middle"] != "NULL":
+        if row["middle"] != None:
             print(row["first"] + " " + row["middle"] + " " + row["last"] + ",", "born", row["birth"])
 
         # With middle name
