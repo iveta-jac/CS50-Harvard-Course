@@ -1,3 +1,4 @@
+# Import data from a CSV spreadsheet into a database table
 from cs50 import SQL
 from sys import argv, exit
 import csv
@@ -25,14 +26,15 @@ def main():
 
             # If there is no middle name
             if len(name) == 2:
-                print("2")
+
+                # Insert data into the table
+                db.execute("INSERT INTO students (first, middle, last, house, birth) VALUES (?, ?, ?, ?, ?)", name[0], "NULL", name[1], row["house"], row["birth"])
 
             # With middle name
             if len(name) == 3:
-                print("3")
 
-            # Insert temporary data into the table
-            db.execute("INSERT INTO students (first, middle, last, house, birth) VALUES (?, ?, ?, ?, ?)", row["name"], "NULL", "NULL", row["house"], row["birth"])
+                # Insert data into the table
+                db.execute("INSERT INTO students (first, middle, last, house, birth) VALUES (?, ?, ?, ?, ?)", name[0], name[1], name[2], row["house"], row["birth"])
 
 
 main()
