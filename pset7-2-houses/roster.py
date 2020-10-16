@@ -23,12 +23,14 @@ def main():
     for row in rows:
 
         # If there is no middle name
-        if row["middle"] != None:
-            print(row["first"] + " " + row["middle"] + " " + row["last"] + ",", "born", row["birth"])
+        if row["middle"] == None:
+            middle = ""
 
         # With middle name
         else:
-            print(row["first"] + " " + row["last"] + ",", "born", row["birth"])
+            middle = row["middle"] + " "
+
+        print(row["first"] + " " + middle + row["last"] + ", born", row["birth"])
 
 
 main()

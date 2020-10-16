@@ -23,21 +23,20 @@ def main():
         for row in data:
 
             # Separate each name into first, (middle), and last names
-            name = row["name"].split(" ")
+            name = row["name"].split()
 
             # If there is no middle name
             if len(name) == 2:
-
-                # Insert data into the table
-                db.execute("INSERT INTO students (first, middle, last, house, birth) VALUES (?, ?, ?, ?, ?)",
-                           name[0], None, name[1], row["house"], row["birth"])
+                first, last = name
+                middle = None
 
             # With middle name
-            if len(name) == 3:
+            else:
+                first, middle, last = name
 
                 # Insert data into the table
-                db.execute("INSERT INTO students (first, middle, last, house, birth) VALUES (?, ?, ?, ?, ?)",
-                           name[0], name[1], name[2], row["house"], row["birth"])
+            db.execute("INSERT INTO students (first, middle, last, house, birth) VALUES (?, ?, ?, ?, ?)",
+                       first, middle, last, row["house"], row["birth"])
 
 
 main()
