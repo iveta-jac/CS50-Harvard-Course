@@ -3,7 +3,23 @@ body {
     margin: 0;
     padding: 0;
     font-size: 20px;
-    line-height: 1.75;   
+    line-height: 1.75;
+    position: relative;
+    min-height: 100vh;
+}
+
+main {
+    padding-left: 30px;
+    padding-bottom: 90px; 
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: #96c5f7;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 h1 {
@@ -14,20 +30,15 @@ p {
     padding-top: 10px;
 }
 
-section {
-    padding-left: 30px;
-}
-
 /* nav */
 ul {
     display: flex;
     list-style-type: none;
     justify-content: space-evenly;
     margin: 0;
-    padding: 0;
-    font-size: 24px;
-    background-color: #96c5f7;
     padding: 10px 0;
+    font-size: 24px;
+    background-color: #96c5f7;    
 }
 
 li a:link, li a:visited {
@@ -68,6 +79,7 @@ thead {
     background-color: #D6DCFF;
 }
 
+/* img */
 img {
     width: 80%;
 }
