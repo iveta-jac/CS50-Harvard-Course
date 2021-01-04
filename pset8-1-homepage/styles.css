@@ -9,8 +9,7 @@ body {
 }
 
 main {
-    padding-left: 30px;
-    padding-bottom: 90px; 
+    padding: 0px 30px 90px 30px;
 }
 
 footer {
@@ -91,4 +90,27 @@ img {
 /* form */
 form {
     width: 50%;
+}
+
+/* Small devices (phones, tablets 768px and down) */
+@media only screen and (max-width: 768px) {
+    main {
+        padding: 0px 20px 90px 20px;
+    }
+    
+    form {
+        width: 100%;
+    }
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+    ul {    
+        font-size: 1.125rem;
+    }
+
+    /* Show days of the week abbreviations */
+    th span {
+        display: none;
+    }
 }
