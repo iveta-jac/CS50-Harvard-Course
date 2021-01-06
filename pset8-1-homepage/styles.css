@@ -94,10 +94,22 @@ form {
 }
 
 /* news */
+.news-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .news {
     background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
     padding: 15px;
-    list-style: none;    
+    margin: 15px;
+    list-style: none;
+    max-width: 450px;
+}
+
+img.news-img {
+    max-width: 100%;
 }
 
 .news-small {
@@ -118,10 +130,6 @@ a.news-link {
 .news:hover h2 {
     color: #106DD1;
 }
-
-/*.news-link h2:hover {
-    color: #638692;
-}*/
 
 /* Small devices (phones, tablets 768px and down) */
 @media only screen and (max-width: 768px) {  
