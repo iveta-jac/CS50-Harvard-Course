@@ -71,17 +71,17 @@ h1 {
 
 /* home table */
 table {
-    margin: 30px 0px;
+    margin-bottom: 1.5em;
 }
 
 th {
     text-align: left;
-    padding: 5px;
+    padding: 0.5em;
 }
 
 td {
     text-align: center;
-    padding: 5px;
+    padding: 0.5em;
 }
 
 th span {
@@ -116,6 +116,7 @@ form {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-inline-start: 0px;
+   // background-color: red;
 }
 
 /* news item */
@@ -126,6 +127,7 @@ form {
     margin-bottom: 1.5em;
     list-style: none;    
     max-width: 360px;
+   // background-color: yellow;  
 }
 
 a.news-link {
@@ -156,20 +158,15 @@ img.news-img {
     nav ul {    
         font-size: 1.125em;
     }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) { 
 
     /* Show days of the week abbreviations */
     th span {
         display: inline;
     }
-
-    th, td {
-        padding: 10px;
-    }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
 }
 
 /* Large devices (desktops, 992px and up) */
