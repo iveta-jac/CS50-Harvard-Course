@@ -23,7 +23,7 @@ main {
 }
 
 footer {
-    background-color: #96c5f7;
+    background-color: #8a8e99;
     width: 100%;
     text-align: center;
     color: white;
@@ -38,7 +38,7 @@ footer p {
 
 /* nav */
 nav {
-    background-color: #96c5f7;
+    background-color: #8a8e99; /* #767f8a; */
 }
 
 nav ul { 
@@ -72,32 +72,29 @@ h1 {
 /* home table */
 table {
     margin-bottom: 1.5em;
+    width: 100%
 }
 
-th {
-    text-align: left;
-    padding: 0.5em;
-}
-
-td {
+th, td {
+    padding: 0.2em;
     text-align: center;
-    padding: 0.5em;
+    border-bottom: 1px solid #ddd;
 }
 
 th span {
     display: none;
 }
 
-thead {
-    background-color: #96C5F7;
+tr {
+    background-color: white;
 }
 
-.light {
-    background-color: #EBEEFF;
+tr:hover {
+    background-color: #f1f3f6;
 }
 
-.dark {
-    background-color: #D6DCFF;
+thead tr, thead tr:hover {
+    background-color: #dfe5ec;
 }
 
 /* img home */
